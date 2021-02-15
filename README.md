@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live version](https://stupefied-morse-24cdb6.netlify.app)
+[Live version](https://youthful-bhaskara-d3a676.netlify.app/)
 
 ## Prerequisites
 
