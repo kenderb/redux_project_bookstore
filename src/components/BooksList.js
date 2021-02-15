@@ -1,5 +1,5 @@
 import React from 'react';
 
-const BooksList = () => (<div>Hello form BooksList</div>);
+const BooksList = () => (<div />);
 
 export default BooksList;

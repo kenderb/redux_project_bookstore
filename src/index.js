@@ -1,5 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import App from './components/App';
+import rootReducer from './reducers/books';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const initialState = {
+  books: [
+    {
+      id: Math.random() * 10,
+      title: 'Book 1',
+      category: 'A',
+    },
+    {
+      id: Math.random() * 10,
+      title: 'Book 2',
+      category: 'B',
+    },
+  ],
+};
+
+const store = createStore(rootReducer, initialState);
+
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
