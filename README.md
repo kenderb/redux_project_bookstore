@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live version](https://pensive-hawking-22f4d8.netlify.app/)
+[Live version](https://stupefied-morse-24cdb6.netlify.app)
 
 ## Prerequisites
 
