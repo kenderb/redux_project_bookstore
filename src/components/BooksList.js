@@ -1,7 +1,5 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import Books from './Books';
-// import bookReducer from '../reducers';
 
 const BooksList = () => {
   const bookList = [{ id: 1, title: 'some', category: 'Action' }];
