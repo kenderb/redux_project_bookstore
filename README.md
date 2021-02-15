@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Bookstore CMS
 
-### `yarn start`
+>   this project is the front-end of a bookstore cms build with React and Redux.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Built With
 
-### `yarn test`
+- Node.js
+- React
+- React-DOM
+- React-Create-App
+- Redux
+- npm
+- CSS
+- ES6
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo
 
-### `yarn build`
+[Live version](https://pensive-hawking-22f4d8.netlify.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+node: v12.19.0
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Open a terminal or command prompt interface on your PC.
+- Clone the repo with: `https://github.com/kenderb/redux_project_bookstore.git`
+- On the terminal navigate to the project directory using `cd redux_project_bookstore/`
 
-### `yarn eject`
+## 📝 Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. On the terminal navigate to the project directory using `cd redux_project_bookstore/`.
+2. Install dependencies using: `npm install`.
+2. Run a server using: `npm start`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Authors
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+👤 **Kender Bolivar**
 
-## Learn More
+- GitHub: [@kenderb](https://github.com/ken)
+- Twitter: [@KBTarts](https://twitter.com/KBTarts )
+- LinkedIn: [KenderBolivar](https://www.linkedin.com/in/kender-bolivar-1736086b/ )
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:woman: **Cecilia Benitez**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@Ceci007](https://github.com/Ceci007 )
+- Twitter: [@CeciDev](https://twitter.com/CeciDeveloper  )
+- LinkedIn: [cecilia-benítez ](https://www.linkedin.com/in/cecilia-benítez  )
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contributing
 
-### Analyzing the Bundle Size
+Contributions, issues and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to check the [issues page](https://github.com/kenderb/redux_project_bookstore/issues).
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+## :grey_exclamation: Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Stack Overflow
+- Odin Project.
 
-### Deployment
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT LICENSE](LICENSE)
