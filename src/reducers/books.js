@@ -1,14 +1,15 @@
+import nanoid from 'nanoid';
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
 const initialState = {
   books: [
     {
-      id: Math.random() * 10,
+      id: nanoid(10),
       title: 'Book 1',
       category: 'A',
     },
     {
-      id: Math.random() * 10,
+      id: nanoid(10),
       title: 'Book 2',
       category: 'B',
     },
