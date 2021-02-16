@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { connect } from 'react-redux';
+import nanoid from 'nanoid';
+import { createBook } from '../actions/index';
 
 const categoryList = [
   'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi',
@@ -6,20 +9,31 @@ const categoryList = [
 
 const BooksForm = () => {
   const [title, setTitle] = useState('');
+  const [id, setID] = useState('');
   const [category, setCategory] = useState(categoryList[0]);
+  const fromObj = useRef(null);
 
   const handleChange = event => {
     if (event.target.name === 'title') {
       setTitle(event.target.value);
-      console.log(title);
     } else if (event.target.name === 'categories') {
       setCategory(event.target.value);
-      console.log(event.target.value);
+    }
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log('submiting Title...', title);
+    console.log('submiting category...', category);
+    setID(nanoid(10));
+    if (title) {
+      createBook(id, title, category);
+      fromObj.current.reset();
     }
   };
 
   return (
-    <form>
+    <form onSubmit={e => handleSubmit(e)} ref={fromObj} id="summit-form">
       <p>Title</p>
       <input type="text" name="title" onChange={event => handleChange(event)} />
       <p>Category</p>
@@ -34,4 +48,10 @@ const BooksForm = () => {
   );
 };
 
-export default BooksForm;
+const mapDispatchToProps = dispatch => ({
+  createBook: book => {
+    dispatch(createBook(book));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
