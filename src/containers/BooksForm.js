@@ -23,7 +23,7 @@ const BooksForm = () => {
       <p>Title</p>
       <input type="text" name="title" onChange={event => handleChange(event)} />
       <p>Category</p>
-      <select name="categories" onChange={event => handleChange(event)}>
+      <select name="categories" onChange={event => handleChange(event)} selected={category}>
         {categoryList.map(cat => (
           <option key={cat} value={cat}>
             {cat}
