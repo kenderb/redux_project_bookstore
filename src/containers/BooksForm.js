@@ -10,11 +10,11 @@ const BooksForm = () => {
 
   const handleChange = event => {
     if (event.target.name === 'title') {
-      setTitle({ title: event.target.value });
+      setTitle(event.target.value);
       console.log(title);
-    } else if (event.target.name === 'category') {
-      setCategory({ category: event.target.value });
-      console.log(category);
+    } else if (event.target.name === 'categories') {
+      setCategory(event.target.value);
+      console.log(event.target.value);
     }
   };
 
@@ -23,9 +23,9 @@ const BooksForm = () => {
       <p>Title</p>
       <input type="text" name="title" onChange={event => handleChange(event)} />
       <p>Category</p>
-      <select value={category} name="categories" onChange={event => handleChange(event)}>
+      <select name="categories" onChange={event => handleChange(event)}>
         {categoryList.map(cat => (
-          <option key={cat}>
+          <option key={cat} value={cat}>
             {cat}
           </option>
         ))}
