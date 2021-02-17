@@ -14,7 +14,10 @@ display: flex;
 `;
 
 const BlueTextButton = styled.button`
+  display: flex;
+  align-items: center;
   margin: 4px 14px 0 0;
+  font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -27,10 +30,19 @@ const BlueTextButton = styled.button`
     outline:none;
     transform: scale(1.1)
   }
+  &+&:before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 24px;
+    background-color: var(--gray-border);
+    margin-right: 10px;
+  }
 `;
 
 const HeaderBookWrapper = styled.div`
   line-height:1.8em;
+  position: relative;
 `;
 const TitleBookWrapper = styled.div`
   display:flex;
@@ -51,6 +63,24 @@ const FooterBookWrapper = styled.div`
   display:flex;
   justify-content: space-between;
   margin-top: auto;
+`;
+
+const ProgressWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ProgressTitle = styled.h3`
+  font-size: 32px;
+  font-weight: 400;
+`;
+
+const Completed = styled.p`
+  font-size: 14px;
+  color: var(--black-two);
+  opacity: 0.5;
+  font-weight: 400;
 `;
 
 const Books = ({
@@ -77,9 +107,27 @@ const Books = ({
         </BlueTextButton>
       </FooterBookWrapper>
     </TitleBookWrapper>
-    <div>
-      two
-    </div>
+    <ProgressWrapper>
+      <svg
+        className="progress-ring"
+        width="120"
+        height="120"
+      >
+        <circle
+          className="progress-ring__circle"
+          stroke="#379cf6"
+          strokeWidth="6"
+          fill="transparent"
+          r="40"
+          cx="60"
+          cy="60"
+        />
+      </svg>
+      <div>
+        <ProgressTitle>100%</ProgressTitle>
+        <Completed>Completed</Completed>
+      </div>
+    </ProgressWrapper>
     <div>
       three
     </div>
