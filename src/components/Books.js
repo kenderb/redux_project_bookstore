@@ -30,7 +30,8 @@ const BlueTextButton = styled.button`
     outline:none;
     transform: scale(1.1)
   }
-  &+&:before {
+
+  & + &:before {
     content: "";
     display: inline-block;
     width: 2px;
@@ -66,6 +67,7 @@ const FooterBookWrapper = styled.div`
 `;
 
 const ProgressWrapper = styled.div`
+  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,11 +78,53 @@ const ProgressTitle = styled.h3`
   font-weight: 400;
 `;
 
-const Completed = styled.p`
+const GrayText = styled.p`
   font-size: 14px;
   color: var(--black-two);
   opacity: 0.5;
   font-weight: 400;
+`;
+
+const Separator = styled.div`
+  width: 2px;
+  height: 70px;
+  margin: 18px 59px 0 79px;
+  border: solid 1px var(--gray-border);
+`;
+
+const ProgressDetailWrapper = styled(TitleBookWrapper)`
+  line-height: 1.5em;
+`;
+
+const UpdateButton = styled.button`
+  font-family: RobotoSlab;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+  width: 200px;
+  height: 33px;
+  margin-top: 12px;
+  border: none;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  transition: transform 0.2s ease;
+  &:focus {
+    outline: none;
+    transform: scale(1.01);
+  }
+`;
+
+const ChapterNumber = styled.p`
+  font-family: RobotoSlab;
+  font-size: 17px;
+  font-weight: 400;
+`;
+const CurrentChapterWrapper = styled(GrayText)`
+  font-family: RobotoSlab;
+  text-transform: uppercase;
 `;
 
 const Books = ({
@@ -116,21 +160,26 @@ const Books = ({
         <circle
           className="progress-ring__circle"
           stroke="#379cf6"
-          strokeWidth="6"
+          strokeWidth="5"
           fill="transparent"
-          r="40"
+          r="34"
           cx="60"
           cy="60"
         />
       </svg>
       <div>
         <ProgressTitle>100%</ProgressTitle>
-        <Completed>Completed</Completed>
+        <GrayText>Completed</GrayText>
       </div>
     </ProgressWrapper>
-    <div>
-      three
-    </div>
+    <Separator />
+    <ProgressDetailWrapper>
+      <CurrentChapterWrapper>Current Chapter</CurrentChapterWrapper>
+      <ChapterNumber>Chapter 99</ChapterNumber>
+      <UpdateButton type="button">
+        Update progress
+      </UpdateButton>
+    </ProgressDetailWrapper>
   </BookWrapper>
 );
 
