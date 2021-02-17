@@ -12,7 +12,8 @@ const Navbar = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--white-2);
+  border-bottom: solid 1px var( --gray-border);
+  background-color: var(--white-two);
   padding: 10px 100px;
 `;
 
@@ -40,6 +41,13 @@ const Image = styled.img`
   height: 30px;
 `;
 
+const Item = styled.p`
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--black-two);
+`;
+
 const BooksList = ({
   books, filter, changeFilter, removeBook,
 }) => {
@@ -62,22 +70,13 @@ const BooksList = ({
         <Navbar>
           <WrapperLeft>
             <Title>Bookstore CMS</Title>
-            <a href="/">books</a>
+            <Item>books</Item>
             <CategoryFilter onChange={handleFilterChange} />
           </WrapperLeft>
           <WrapperRight>
             <Image src={reactIcon} alt="" />
           </WrapperRight>
         </Navbar>
-        <div>
-          <div>Book ID</div>
-        </div>
-        <div>
-          <div>Title</div>
-        </div>
-        <div>
-          <div>Category</div>
-        </div>
       </div>
       <div>
         {

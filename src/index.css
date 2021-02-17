@@ -7,16 +7,19 @@
 
 :root {
   box-sizing: border-box;
+
   --bubble-gum-pink: #ff5ab7;
+  --gray-border: #e8e8e8;
   --black: #1e1e1e;
+  --black-two: #121212;
   --medium-blue: #307bbe;
   --white: #fafafa;
-  --white-2: #ffffff;
+  --white-two: #fff;
   --pinkish-grey: #c4c4c4;
   --pale-grey: #f5f6fa;
   --dodger-blue: #379cf6;
   --azure: #0290ff;
-  --warm-grey: #888888;
+  --warm-grey: #888;
   --cool-blue: #4386bf;
 }
 
