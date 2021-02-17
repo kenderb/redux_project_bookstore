@@ -5,12 +5,12 @@ const initialState = [
   {
     id: nanoid(10),
     title: 'Book 1',
-    category: 'A',
+    category: 'Action',
   },
   {
     id: nanoid(10),
     title: 'Book 2',
-    category: 'B',
+    category: 'Biography',
   },
 ];
 

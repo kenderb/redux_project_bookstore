@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live version](https://friendly-mahavira-2a1c50.netlify.app/)
+[Live version](https://jolly-hamilton-613da8.netlify.app/)
 
 ## Prerequisites
 
