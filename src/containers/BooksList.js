@@ -1,9 +1,44 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Books from '../components/Books';
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
+import reactIcon from '../assets/icon.png';
+
+const Navbar = styled.div`
+  height: 95px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white-2);
+  padding: 10px 100px;
+`;
+
+const Title = styled.h1`
+  font-size: 30px;
+  color: var(--azure);
+`;
+
+const WrapperLeft = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+`;
+
+const WrapperRight = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+const Image = styled.img`
+  width: 33px;
+  height: 30px;
+`;
 
 const BooksList = ({
   books, filter, changeFilter, removeBook,
@@ -22,24 +57,29 @@ const BooksList = ({
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-        </tr>
-        <tr>
-          <th>Title</th>
-        </tr>
-        <tr>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>
+    <div>
+      <div>
+        <Navbar>
+          <WrapperLeft>
+            <Title>Bookstore CMS</Title>
+            <a href="/">books</a>
             <CategoryFilter onChange={handleFilterChange} />
-          </th>
-        </tr>
+          </WrapperLeft>
+          <WrapperRight>
+            <Image src={reactIcon} alt="" />
+          </WrapperRight>
+        </Navbar>
+        <div>
+          <div>Book ID</div>
+        </div>
+        <div>
+          <div>Title</div>
+        </div>
+        <div>
+          <div>Category</div>
+        </div>
+      </div>
+      <div>
         {
         filterBooksHelper().map(book => (
           <Books
@@ -51,8 +91,8 @@ const BooksList = ({
           />
         ))
         }
-      </tbody>
-    </table>
+      </div>
+    </div>
   );
 };
 
