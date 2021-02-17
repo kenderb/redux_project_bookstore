@@ -10,7 +10,7 @@ const CategoryFilter = ({ onChange }) => (
     <label htmlFor="filter">
       Filter Categories
       <select id="filter" onChange={e => onChange(e.target.value)}>
-        {[...categoryList, 'All'].map(cat => (<option key={cat} value={cat}>{cat}</option>))}
+        {['All', ...categoryList].map(cat => (<option key={cat} value={cat}>{cat}</option>))}
       </select>
     </label>
   </div>

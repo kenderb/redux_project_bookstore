@@ -16,6 +16,11 @@ const BooksList = ({
     changeFilter(vale);
   };
 
+  const filterBooksHelper = () => {
+    if (filter !== 'All') return books.filter(book => book.category === filter);
+    return books;
+  };
+
   return (
     <table>
       <thead>
@@ -32,11 +37,11 @@ const BooksList = ({
       <tbody>
         <tr>
           <th>
-            {filter}
             <CategoryFilter onChange={handleFilterChange} />
           </th>
         </tr>
-        {books.map(book => (
+        {
+        filterBooksHelper().map(book => (
           <Books
             id={book.id}
             key={book.id}
@@ -44,7 +49,8 @@ const BooksList = ({
             onRemoveBook={handleRemoveBook}
             category={book.category}
           />
-        ))}
+        ))
+        }
       </tbody>
     </table>
   );
