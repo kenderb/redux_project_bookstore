@@ -24,13 +24,13 @@ const BooksList = ({ books, removeBook }) => {
       </thead>
       <tbody>
         {books.map(book => (
-            <Books
-              id={book.id}
-              key={book.id}
-              title={book.title}
-              onRemoveBook={handleRemoveBook}
-              category={book.category}
-            />
+          <Books
+            id={book.id}
+            key={book.id}
+            title={book.title}
+            onRemoveBook={handleRemoveBook}
+            category={book.category}
+          />
         ))}
       </tbody>
     </table>
