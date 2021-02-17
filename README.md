@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live version](https://youthful-bhaskara-d3a676.netlify.app/)
+[Live version](https://friendly-mahavira-2a1c50.netlify.app/)
 
 ## Prerequisites
 
