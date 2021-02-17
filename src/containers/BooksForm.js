@@ -1,15 +1,16 @@
 import React, { useState, useRef } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
-import { createBook } from '../actions/index';
+import { createBook } from '../actions';
 
 const categoryList = [
   'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi',
 ];
 
-const BooksForm = () => {
+const BooksForm = ({ createBook }) => {
   const [title, setTitle] = useState('');
-  const [id, setID] = useState('');
+  const [id, setID] = useState(nanoid(10));
   const [category, setCategory] = useState(categoryList[0]);
   const fromObj = useRef(null);
 
@@ -23,11 +24,11 @@ const BooksForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log('submiting Title...', title);
-    console.log('submiting category...', category);
     setID(nanoid(10));
     if (title) {
-      createBook(id, title, category);
+      createBook({ id, title, category });
+      setTitle('');
+      setCategory(categoryList[0]);
       fromObj.current.reset();
     }
   };
@@ -48,10 +49,8 @@ const BooksForm = () => {
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  createBook: book => {
-    dispatch(createBook(book));
-  },
-});
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 
-export default connect(null, mapDispatchToProps)(BooksForm);
+export default connect(null, { createBook })(BooksForm);
