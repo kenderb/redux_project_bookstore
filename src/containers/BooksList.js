@@ -24,14 +24,13 @@ const BooksList = ({ books, removeBook }) => {
       </thead>
       <tbody>
         {books.map(book => (
-          <React.Fragment key={book.id}>
             <Books
               id={book.id}
+              key={book.id}
               title={book.title}
               onRemoveBook={handleRemoveBook}
               category={book.category}
             />
-          </React.Fragment>
         ))}
       </tbody>
     </table>
