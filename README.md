@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live version](https://jolly-hamilton-613da8.netlify.app/)
+[Live version](https://hardcore-dubinsky-3d06e3.netlify.app/)
 
 ## Prerequisites
 
