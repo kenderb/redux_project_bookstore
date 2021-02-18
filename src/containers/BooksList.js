@@ -1,52 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Books from '../components/Books';
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 import reactIcon from '../assets/icon.png';
-
-const Navbar = styled.div`
-  height: 95px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid 1px var( --gray-border);
-  background-color: var(--white-two);
-  padding: 10px 100px;
-`;
-
-const Title = styled.h1`
-  font-size: 30px;
-  color: var(--azure);
-`;
-
-const WrapperLeft = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  align-items: center;
-`;
-
-const WrapperRight = styled.div`
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
-
-const Image = styled.img`
-  width: 33px;
-  height: 30px;
-`;
-
-const Item = styled.p`
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 400;
-  color: var(--black-two);
-`;
+import {
+  Navbar, WrapperLeft, Title, Item, WrapperRight, Image,
+} from '../components/styled/lib';
 
 const BooksList = ({
   books, filter, changeFilter, removeBook,
