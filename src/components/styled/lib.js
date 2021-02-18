@@ -216,7 +216,7 @@ export const FormInput = styled.input`
 export const FormSelect = styled.select`
   width: 230px;
   height: 45px;
-  padding: 6px 15px 9px 16px;
+  padding: 6px 15px 9px 16px; 
   border-radius: 4px;
   border: solid 1px var(--gray-border);
   background-color: var(--white-two);
