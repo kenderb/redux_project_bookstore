@@ -96,7 +96,7 @@ const ProgressDetailWrapper = styled(TitleBookWrapper)`
   line-height: 1.5em;
 `;
 
-const UpdateButton = styled.button`
+export const UpdateButton = styled.button`
   font-family: RobotoSlab;
   text-transform: uppercase;
   font-weight: 300;
@@ -117,6 +117,11 @@ const UpdateButton = styled.button`
   }
 `;
 
+const BookTitle = styled.h3`
+  font-family: RobotoSlab;
+  font-size: 24px;
+`;
+
 const ChapterNumber = styled.p`
   font-family: RobotoSlab;
   font-size: 17px;
@@ -134,9 +139,9 @@ const Books = ({
     <TitleBookWrapper>
       <HeaderBookWrapper>
         <Category>{category}</Category>
-        <h3>
+        <BookTitle>
           {title}
-        </h3>
+        </BookTitle>
         <BlueTextButton>
           {id}
         </BlueTextButton>

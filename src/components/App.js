@@ -8,9 +8,8 @@ const Wrapper = styled.section`
   display: block;
   width: 90%;
   background-color: #fff;
-  height: 1097px;
-  margin: 0 40px 65px 0;
-  margin: 0 auto;
+  height: auto;
+  margin: 50px auto;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--white);
