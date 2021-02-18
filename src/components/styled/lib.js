@@ -13,14 +13,20 @@ export const Wrapper = styled.section`
 `;
 
 export const BookWrapper = styled.div`
-display: flex;
-  width: 1200px;
+  display: flex;
+  max-width: 1200px;
   height: 170px;
   margin: 37px 100px 0;
   padding: 32px 147px 26px 27px;
   border-radius: 4px;
   border: solid 1px var( --gray-border);
   background-color: var(--white-two);
+  @media only screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    padding: 32px 32px 26px 27px;
+  }
 `;
 
 export const BlueTextButton = styled.button`
@@ -81,6 +87,10 @@ export const ProgressWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 1200px) {
+    margin-left: 0;
+    margin-right: 30px;
+  }
 `;
 
 export const ProgressTitle = styled.h3`
@@ -100,6 +110,9 @@ export const Separator = styled.div`
   height: 70px;
   margin: 18px 59px 0 79px;
   border: solid 1px var(--gray-border);
+  @media only screen and (max-width: 1200px) {
+    display: none
+  }
 `;
 
 export const ProgressDetailWrapper = styled(TitleBookWrapper)`
@@ -195,6 +208,9 @@ export const FormInput = styled.input`
   &:focus {
     outline: none;
   }
+  @media only screen and (max-width: 1200px) {
+    width: 50%;
+  }
 `;
 
 export const FormSelect = styled.select`
@@ -207,6 +223,9 @@ export const FormSelect = styled.select`
   &:focus {
     outline: none;
   }
+  @media only screen and (max-width: 1200px) {
+    width: 180px;
+  }
 `;
 
 export const FormButton = styled(UpdateButton)`
@@ -215,6 +234,9 @@ export const FormButton = styled(UpdateButton)`
   padding: 6px 15px 9px 16px;
   margin-top: 0;
   font-weight: 400;
+  @media only screen and (max-width: 1200px) {
+    width: 180px;
+  }
 `;
 
 export const Navbar = styled.div`
@@ -237,6 +259,9 @@ export const WrapperLeft = styled.div`
   justify-content: space-between;
   width: 50%;
   align-items: center;
+  @media only screen and (max-width: 1200px) {
+    width: 90%;
+  }
 `;
 
 export const WrapperRight = styled.div`
