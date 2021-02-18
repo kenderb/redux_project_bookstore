@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Select } from './styled/lib';
 
 const categoryList = [
   'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi',
@@ -7,12 +8,9 @@ const categoryList = [
 
 const CategoryFilter = ({ onChange }) => (
   <div>
-    <label htmlFor="filter">
-      Filter Categories
-      <select id="filter" onChange={e => onChange(e.target.value)}>
-        {['All', ...categoryList].map(cat => (<option key={cat} value={cat}>{cat}</option>))}
-      </select>
-    </label>
+    <Select id="filter" onChange={e => onChange(e.target.value)}>
+      {['All', ...categoryList].map(cat => (<option key={cat} value={cat}>{cat}</option>))}
+    </Select>
   </div>
 );
 

@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import Books from '../components/Books';
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
+import reactIcon from '../assets/icon.png';
+import {
+  Navbar, WrapperLeft, Title, Item, WrapperRight, Image,
+} from '../components/styled/lib';
 
 const BooksList = ({
   books, filter, changeFilter, removeBook,
@@ -22,24 +26,20 @@ const BooksList = ({
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-        </tr>
-        <tr>
-          <th>Title</th>
-        </tr>
-        <tr>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>
+    <div>
+      <div>
+        <Navbar>
+          <WrapperLeft>
+            <Title>Bookstore CMS</Title>
+            <Item>books</Item>
             <CategoryFilter onChange={handleFilterChange} />
-          </th>
-        </tr>
+          </WrapperLeft>
+          <WrapperRight>
+            <Image src={reactIcon} alt="" />
+          </WrapperRight>
+        </Navbar>
+      </div>
+      <div>
         {
         filterBooksHelper().map(book => (
           <Books
@@ -51,8 +51,8 @@ const BooksList = ({
           />
         ))
         }
-      </tbody>
-    </table>
+      </div>
+    </div>
   );
 };
 

@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
 import { createBook } from '../actions';
+import {
+  Form, FormBookTitle, FormWrapper, FormSelect, FormInput, FormButton,
+} from '../components/styled/lib';
 
 const categoryList = [
   'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi',
@@ -34,18 +37,25 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <form onSubmit={e => handleSubmit(e)} ref={fromObj} id="summit-form">
-      <p>Title</p>
-      <input type="text" name="title" onChange={event => handleChange(event)} />
-      <p>Category</p>
-      <select name="categories" onChange={event => handleChange(event)} selected={category}>
-        {categoryList.map(cat => (
-          <option key={cat} value={cat}>
-            {cat}
-          </option>
-        ))}
-      </select>
-    </form>
+    <Form onSubmit={e => handleSubmit(e)} ref={fromObj} id="summit-form">
+      <FormBookTitle>Add new Book</FormBookTitle>
+      <FormWrapper>
+        <FormInput
+          type="text"
+          name="title"
+          onChange={event => handleChange(event)}
+          placeholder="Book title"
+        />
+        <FormSelect name="categories" onChange={event => handleChange(event)} selected={category}>
+          {categoryList.map(cat => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </FormSelect>
+        <FormButton type="submit" onClick={event => handleSubmit(event)}>add book</FormButton>
+      </FormWrapper>
+    </Form>
   );
 };
 
